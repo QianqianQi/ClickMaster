@@ -96,7 +96,7 @@ function spawnTarget() {
     const isBomb = Math.random() < 0.3;
     if (isBomb) {
         target.classList.add('target');
-        target.src = 'assets/image/bug.png'; 
+        target.src = Math.random() < 0.5 ? 'assets/image/bug2.png' : 'assets/image/bug3.png'; 
     } else {
         target.classList.add('target');
         target.src = images[Math.floor(Math.random() * images.length)];
