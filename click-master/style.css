@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin: 50px auto;
+    width: 800px;
+}
+
+.game-area {
+    margin: 20px auto;
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    border: 2px solid #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.pause-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+    color: red;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 1000;
+    display: none; /* 默认隐藏 */
+}
+
+#startBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#endBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#startBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#startBtn:hover {
+    background-color: #45a049;
+}
+
+#endBtn {
+    background-color: #ccc;
+    color: black;
+}
+
+#endBtn:hover {
+    background-color: #a12e2e;
+}
+
+#scoreBoard {
+    margin-top: 40px;
+    font-size: 30px;
+    color: blue;
+    width: 100%;              /* 让它占据可用宽度 */
+    text-align: center;       /* 居中对齐文本 */
+    white-space: nowrap;      /* 防止换行，确保所有文字在一行显示 */
+    overflow: hidden;         /* 如果内容过多，隐藏溢出 */
+    text-overflow: ellipsis;  /* 添加省略号，如果文字过长 */
+}
+
+.target {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    border: none;  /* 去除图片的边框 */
+    outline: none;  /* 去除图片的轮廓线 */
+    box-shadow: none;  /* 去除可能的阴影 */
+}
+
+.bomb {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* 禁用状态的样式 */
+#startBtn:disabled, #endBtn:disabled {
+    background-color: #a9a9a9; /* 灰色背景 */
+    color: #666666; /* 字体颜色变浅 */
+    cursor: not-allowed; /* 显示禁用光标 */
+}

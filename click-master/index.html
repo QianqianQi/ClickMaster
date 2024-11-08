@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Click Master</h1>
+        <button id="startBtn">Start Game</button>
+        <button id="endBtn">End Game</button>
+        <div id="gameArea" class="game-area">
+            <!-- 游戏物体会出现在这里 -->
+            <div id="pauseOverlay" class="pause-overlay">
+                <p>HIT BUG!! Paused for <span id="pauseCountdown">5</span> seconds!</p>
+            </div>
+        </div>
+        <div id="scoreBoard">
+            <p>Time: <span id="timeLeft">60</span> s</p>
+            <p>Score: <span id="score">0</span></p>           
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
